@@ -2,7 +2,6 @@ package org.javaee7.servlet.security.deny.uncovered;
 
 import static com.gargoylesoftware.htmlunit.HttpMethod.POST;
 import static com.gargoylesoftware.htmlunit.HttpMethod.PUT;
-import static org.javaee7.servlet.security.deny.uncovered.ServerOperations.addUsersToContainerIdentityStore;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -54,8 +53,6 @@ public class SecureServletTest {
 
     @Before
     public void setup() {
-        addUsersToContainerIdentityStore();
-
         correctCreds.addCredentials("u1", "p1");
         incorrectCreds.addCredentials("random", "random");
         webClient = new WebClient();
