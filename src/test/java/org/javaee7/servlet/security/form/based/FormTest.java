@@ -1,6 +1,5 @@
 package org.javaee7.servlet.security.form.based;
 
-import static org.javaee7.servlet.security.form.based.ServerOperations.addUsersToContainerIdentityStore;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 import static org.junit.Assert.assertEquals;
 
@@ -51,8 +50,6 @@ public class FormTest {
 
     @Before
     public void setup() throws IOException {
-        addUsersToContainerIdentityStore();
-
         @SuppressWarnings("resource")
         WebClient webClient = new WebClient();
         HtmlPage page = webClient.getPage(base + "SecureServlet");
