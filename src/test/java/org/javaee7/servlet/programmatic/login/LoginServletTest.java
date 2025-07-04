@@ -1,6 +1,5 @@
 package org.javaee7.servlet.programmatic.login;
 
-import static org.javaee7.servlet.programmatic.login.ServerOperations.addUsersToContainerIdentityStore;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 import static org.junit.Assert.assertTrue;
 
@@ -44,7 +43,6 @@ public class LoginServletTest {
     
     @Before
     public void setup() {
-        addUsersToContainerIdentityStore();
         webClient = new WebClient();
     }
     
